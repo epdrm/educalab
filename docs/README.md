@@ -9,14 +9,15 @@
 ## Fase 1 - Inicio do Projeto
 
 - Fazer a estrutura basica do projeto criação do index html e das pastas styles, js e img siga essa estrutura de pastas aqui:
-/
-index.html
 
-/styles
-  --themes.css
-  --index.css
-/js
-  --index.js
+```
+projeto
+┣ /styles
+┣ /js 
+┣ /img 
+┣ index.html 
+┃ 
+```
 
 ## Fase 2 - HTML
 
