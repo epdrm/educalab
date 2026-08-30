@@ -1,0 +1,90 @@
+/* Cores do Projeto EducaLab */
+
+:root {
+    /* Cores Principais */
+    --primary-color: #6366f1;
+    --secondary-color: #ec4899;
+    --accent-color: #f59e0b;
+    
+    /* Cores Neutras */
+    --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #1f2937;
+    --gray: #6b7280;
+    --light-gray: #f3f4f6;
+    --very-light-gray: #f9fafb;
+    
+    /* Cores de Fundo */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-dark: #0f172a;
+    
+    /* Cores de Texto */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #f9fafb;
+    
+    /* Cores de Estado */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --info-color: #3b82f6;
+    
+    /* Cores de Botão */
+    --btn-primary-bg: #6366f1;
+    --btn-primary-hover: #4f46e5;
+    --btn-secondary-bg: #ec4899;
+    --btn-secondary-hover: #db2777;
+    --btn-outline-border: #6366f1;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Aplicar variáveis ao corpo */
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+/* Classes para cores de texto */
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+/* Classes para cores de fundo */
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+/* Classes para cores de acentuação */
+.accent-primary {
+    color: var(--primary-color);
+}
+
+.accent-secondary {
+    color: var(--secondary-color);
+}
+
+.accent-accent {
+    color: var(--accent-color);
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaLab - Laboratório de Educação</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/colorsStyles.css">
+    <link rel="stylesheet" href="styles/fontsStyles.css">
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/heroStyles.css">
+    <link rel="stylesheet" href="styles/carouselStyles.css">
+    <link rel="stylesheet" href="styles/projectsStyles.css">
+    <link rel="stylesheet" href="styles/footerStyles.css">
+    
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/projects.js" defer></script>
+</head>
+<body>
+    <!-- 1. Área Inicial -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">EducaLab</h1>
+            <p class="hero-subtitle">Laboratório de Educação Inovadora</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('featured-projects')">
+                    Projetos em Destaque
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('videos')">
+                    Vídeos Explicativos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Vídeo Principal -->
+    <section id="main-video" class="main-video">
+        <div class="video-container">
+            <h2>Vídeo Principal</h2>
+            <iframe width="100%" height="600" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- 3. Explicação sobre o Projeto -->
+    <section id="explanation" class="explanation">
+        <div class="explanation-content">
+            <div class="explanation-text">
+                <h2>Sobre o EducaLab</h2>
+                <p class="explanation-item">
+                    <span class="dot"></span>
+                    O EducaLab é uma plataforma inovadora de educação
+                </p>
+                <p class="explanation-item">
+                    <span class="dot"></span>
+                    Oferecemos cursos práticos e projetos reais
+                </p>
+                <p class="explanation-item">
+                    <span class="dot"></span>
+                    Conectamos alunos com tecnologia de ponta
+                </p>
+                <p class="explanation-item">
+                    <span class="dot"></span>
+                    Desenvolvemos habilidades para o futuro
+                </p>
+            </div>
+            <div class="explanation-dots">
+                <span class="dot-nav active" onclick="showExplanation(0)"></span>
+                <span class="dot-nav" onclick="showExplanation(1)"></span>
+                <span class="dot-nav" onclick="showExplanation(2)"></span>
+                <span class="dot-nav" onclick="showExplanation(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projetos em Destaque -->
+    <section id="featured-projects" class="featured-projects">
+        <h2>Projetos em Destaque</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <div class="featured-text">
+                    <h3>Sistema de Gerenciamento</h3>
+                    <p>Plataforma completa para gerenciar projetos educacionais com interface intuitiva.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('sistema')">Ver Detalhes</button>
+                </div>
+                <div class="featured-image">
+                    <img src="img/project1.png" alt="Sistema de Gerenciamento">
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    <img src="img/project2.png" alt="Plataforma de Aprendizado">
+                </div>
+                <div class="featured-text">
+                    <h3>Plataforma de Aprendizado</h3>
+                    <p>Ambiente interativo para alunos aprimorarem suas habilidades de programação.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('plataforma')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-text">
+                    <h3>Comunidade de Desenvolvedores</h3>
+                    <p>Rede colaborativa onde desenvolvedores compartilham conhecimento e projetos.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('comunidade')">Ver Detalhes</button>
+                </div>
+                <div class="featured-image">
+                    <img src="img/project3.png" alt="Comunidade de Desenvolvedores">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Vídeos Explicativos -->
+    <section id="videos" class="videos">
+        <h2>Vídeos Explicativos</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-item">
+                        <iframe width="100%" height="400" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" allowfullscreen></iframe>
+                        <h3>Vídeo 1: Introdução</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="100%" height="400" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" allowfullscreen></iframe>
+                        <h3>Vídeo 2: Conceitos Básicos</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="100%" height="400" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" allowfullscreen></iframe>
+                        <h3>Vídeo 3: Projetos Práticos</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="100%" height="400" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" allowfullscreen></iframe>
+                        <h3>Vídeo 4: Avançado</h3>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+        </div>
+    </section>
+
+    <!-- 6. Apresentação do Curso e Integrantes -->
+    <section id="course-team" class="course-team">
+        <div class="course-team-container">
+            <div class="course-team-left">
+                <h2>Nossos Integrantes</h2>
+                <div class="team-members">
+                    <div class="member">
+                        <img src="img/member1.png" alt="Membro 1">
+                        <h3>João Silva</h3>
+                        <p>Coordenador Geral</p>
+                    </div>
+                    <div class="member">
+                        <img src="img/member2.png" alt="Membro 2">
+                        <h3>Maria Santos</h3>
+                        <p>Desenvolvedora</p>
+                    </div>
+                    <div class="member">
+                        <img src="img/member3.png" alt="Membro 3">
+                        <h3>Pedro Oliveira</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-team-right">
+                <h2>Sobre o Curso</h2>
+                <p>O EducaLab oferece uma experiência de aprendizado única, combinando teoria com prática.</p>
+                <ul class="course-features">
+                    <li>✓ Cursos estruturados e certificados</li>
+                    <li>✓ Projetos reais e portfólio</li>
+                    <li>✓ Mentoria personalizada</li>
+                    <li>✓ Comunidade ativa e colaborativa</li>
+                    <li>✓ Tecnologias atualizadas</li>
+                    <li>✓ Oportunidades de emprego</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Projetos -->
+    <section id="all-projects" class="all-projects">
+        <h2>Todos os Projetos</h2>
+        <div class="projects-filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+            <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+            <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+            <button class="filter-btn" onclick="filterProjects('backend')">Backend</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+            <div class="project-card" data-category="web">
+                <img src="img/project4.png" alt="Projeto 1">
+                <h3>Projeto Web 1</h3>
+                <p>Descrição do projeto web</p>
+                <button class="btn btn-small" onclick="openProjectModal('web1')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <img src="img/project5.png" alt="Projeto 2">
+                <h3>Projeto Mobile 1</h3>
+                <p>Descrição do projeto mobile</p>
+                <button class="btn btn-small" onclick="openProjectModal('mobile1')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="backend">
+                <img src="img/project6.png" alt="Projeto 3">
+                <h3>Projeto Backend 1</h3>
+                <p>Descrição do projeto backend</p>
+                <button class="btn btn-small" onclick="openProjectModal('backend1')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="img/project7.png" alt="Projeto 4">
+                <h3>Projeto Web 2</h3>
+                <p>Descrição do projeto web</p>
+                <button class="btn btn-small" onclick="openProjectModal('web2')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <img src="img/project8.png" alt="Projeto 5">
+                <h3>Projeto Mobile 2</h3>
+                <p>Descrição do projeto mobile</p>
+                <button class="btn btn-small" onclick="openProjectModal('mobile2')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="backend">
+                <img src="img/project9.png" alt="Projeto 6">
+                <h3>Projeto Backend 2</h3>
+                <p>Descrição do projeto backend</p>
+                <button class="btn btn-small" onclick="openProjectModal('backend2')">Saiba Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>EducaLab</h4>
+                <p>Transformando a educação através da tecnologia e inovação.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#featured-projects">Projetos</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#course-team">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@educalab.com</p>
+                <p>Telefone: (11) 9999-9999</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EducaLab. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Detalhes de Projetos -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <h2 id="modalTitle">Detalhes do Projeto</h2>
+            <p id="modalDescription">Descrição do projeto será exibida aqui.</p>
+            <button class="btn btn-primary" onclick="closeProjectModal()">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
