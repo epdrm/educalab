@@ -21,6 +21,7 @@ projeto
 ┣ /styles
 ┣ /js 
 ┣ /img 
+┣ /videos
 ┣ index.html 
 ┃ 
 ```
@@ -45,7 +46,7 @@ projeto
 
     7. Projetos: Área mostrando todos os projetos
 
-    8. Footer: Um footer para texto
+    8. Footer: Um footer com texto informativo e links rápidos
 
 - A estruturação na formação da pagina deve seguir essa ordem.
 

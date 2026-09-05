@@ -1,0 +1,57 @@
+BIBLIOTECAS UTILIZADAS - EducaLab
+==================================
+
+Este projeto foi desenvolvido utilizando HTML5, CSS3 e JavaScript vanilla, sem dependências externas de bibliotecas.
+
+As únicas referências externas utilizadas são:
+
+1. Google Fonts (Poppins) - https://fonts.google.com/specimen/Poppins
+   - Opcional: Para aprimorar a tipografia, pode ser adicionada via:
+   - <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+TECNOLOGIAS UTILIZADAS:
+- HTML5: Estrutura semântica da página
+- CSS3: Estilização responsiva e animações
+- JavaScript (Vanilla): Interatividade e controle dinâmico
+
+RECURSOS JAVASCRIPT UTILIZADOS:
+- DOM API (document.querySelector, addEventListener, etc.)
+- Fetch API (caso seja necessário adicionar posteriormente)
+- LocalStorage (caso seja necessário adicionar posteriormente)
+
+ESTRUTURA DO PROJETO:
+- /styles/: Arquivos CSS organizados por tema
+  - colorsStyles.css: Variáveis de cores
+  - fontsStyles.css: Variáveis de tipografia
+  - mainStyles.css: Estilos gerais
+  - heroStyles.css: Estilos da seção hero
+  - carouselStyles.css: Estilos do carrossel
+  - projectsStyles.css: Estilos dos projetos e modais
+  - footerStyles.css: Estilos do footer
+
+- /js/: Arquivos JavaScript organizados por funcionalidade
+  - main.js: Funcionalidades principais
+  - carousel.js: Controle do carrossel
+  - projects.js: Filtros e modais
+
+- /img/: Pasta para imagens do projeto
+  - Substituir imagens de placeholder conforme necessário
+- /videos/: Pasta para os arquivos de vídeo locais do projeto
+  - Adicionar arquivos .mp4 e atualizar os caminhos no index.html
+
+COMO ADICIONAR BIBLIOTECAS (OPCIONAL):
+Se no futuro desejar adicionar bibliotecas, aqui estão algumas recomendações:
+
+1. Bootstrap (Framework CSS) - https://getbootstrap.com/
+2. jQuery (Manipulação DOM) - https://jquery.com/
+3. Animate.css (Animações) - https://animate.style/
+4. Swiper (Carrossel Avançado) - https://swiperjs.com/
+5. Chart.js (Gráficos) - https://www.chartjs.org/
+6. Three.js (3D Graphics) - https://threejs.org/
+7. GSAP (Animações Avançadas) - https://gsap.com/
+
+NOTES:
+- O projeto é totalmente responsivo para desktop, tablet e mobile
+- Usa variáveis CSS para fácil customização de cores e fontes
+- Implementa smooth scroll, carrossel funcional, filtros e modais
+- Pronto para adicionar backend e autenticação quando necessário

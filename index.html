@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaLab - Hub de Ferramentas para Professores</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/colorsStyles.css">
+    <link rel="stylesheet" href="styles/fontsStyles.css">
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/heroStyles.css">
+    <link rel="stylesheet" href="styles/carouselStyles.css">
+    <link rel="stylesheet" href="styles/projectsStyles.css">
+    <link rel="stylesheet" href="styles/footerStyles.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</head>
+<body>
+    <!-- 1. Área Inicial -->
+    <section id="hero" class="hero">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">EducaLab</h1>
+            <p class="hero-subtitle">Hub de ferramentas para o dia a dia dos professores</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('featured-projects')">
+                    Projetos em Destaque
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('videos')">
+                    Vídeos Explicativos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Vídeo Principal -->
+    <section id="main-video" class="main-video">
+        <div class="video-container">
+            <h2>Vídeo Principal</h2>
+            <video class="main-video-player" controls preload="metadata">
+                <source src="videos/video-principal.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </section>
+
+    <!-- 3. Explicação sobre o Projeto -->
+    <section id="explanation" class="explanation">
+        <div class="explanation-content">
+            <div class="explanation-header">
+                <span class="eyebrow">EducaLab</span>
+                <h2>Ferramentas pensadas para a rotina docente</h2>
+            </div>
+
+            <div class="explainer-row" aria-label="Principais pilares do EducaLab">
+                <button class="explanation-pill active" data-copy="O EducaLab reúne ferramentas criadas para apoiar tarefas do dia a dia dos professores." aria-label="Ferramentas para professores">
+                    ✦
+                </button>
+                <button class="explanation-pill" data-copy="Cada projeto busca resolver uma necessidade prática da rotina escolar." aria-label="Soluções práticas">
+                    ⌁
+                </button>
+                <button class="explanation-pill" data-copy="As ferramentas são desenvolvidas colaborativamente pela turma do 3º ano de Desenvolvimento de Sistemas." aria-label="Desenvolvimento colaborativo">
+                    ○
+                </button>
+                <button class="explanation-pill" data-copy="Este é um hub de projetos da EEEP Deputado Roberto Mesquita, feito para ser útil no cotidiano escolar." aria-label="Projetos úteis">
+                    ▣
+                </button>
+            </div>
+
+            <p class="explanation-copy is-visible" aria-live="polite">
+                O EducaLab reúne ferramentas criadas para apoiar tarefas do dia a dia dos professores.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Projetos em Destaque -->
+    <section id="featured-projects" class="featured-projects">
+        <h2>Projetos em Destaque</h2>
+        <div class="featured-grid">
+            <article class="featured-item">
+                <div class="featured-text">
+                    <h3>Sistema de Gerenciamento</h3>
+                    <p>Ferramenta para organizar e acompanhar projetos educacionais com interface intuitiva, automações e painéis de progresso.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('sistema')">Ver Detalhes</button>
+                </div>
+                <div class="featured-image">
+                    <div class="project-mockup" aria-label="Mockup do sistema de gerenciamento">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">dashboard</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">const</span> status = <span class="token-strong">"online"</span>;</div>
+                                <div class="terminal-line"><span class="token">return</span> <span class="token-alt">students</span>.<span class="token">active</span>();</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar"></div>
+                                    <div class="mini-rows">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 65%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 90%"></span>
+                                        <span style="width: 72%"></span>
+                                        <span style="width: 82%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="featured-item">
+                <div class="featured-text">
+                    <h3>Ferramenta de Apoio Pedagógico</h3>
+                    <p>Ambiente interativo para apoiar o planejamento e o acompanhamento de atividades pedagógicas.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('plataforma')">Ver Detalhes</button>
+                </div>
+                <div class="featured-image">
+                    <div class="project-mockup" aria-label="Mockup da plataforma de aprendizado">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">learning</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">course</span> = <span class="token-strong">"full stack"</span>;</div>
+                                <div class="terminal-line"><span class="token">module</span> = <span class="token-alt">"React + Node"</span>;</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 45%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 70%"></span>
+                                        <span style="width: 85%"></span>
+                                        <span style="width: 58%"></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 80%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 95%"></span>
+                                        <span style="width: 62%"></span>
+                                        <span style="width: 78%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="featured-item">
+                <div class="featured-text">
+                    <h3>Central de Ferramentas</h3>
+                    <p>Espaço colaborativo para reunir soluções digitais e projetos desenvolvidos para a comunidade escolar.</p>
+                    <button class="btn btn-outline" onclick="openProjectModal('comunidade')">Ver Detalhes</button>
+                </div>
+                <div class="featured-image">
+                    <div class="project-mockup" aria-label="Mockup da comunidade de desenvolvedores">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">community</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">team</span>.<span class="token">review</span>(<span class="token-alt">"peer feedback"</span>);</div>
+                                <div class="terminal-line"><span class="token">share</span>(<span class="token-strong">"ideas"</span>);</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 30%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 80%"></span>
+                                        <span style="width: 64%"></span>
+                                        <span style="width: 91%"></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 55%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 75%"></span>
+                                        <span style="width: 89%"></span>
+                                        <span style="width: 66%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 5. Vídeos Explicativos -->
+    <section id="videos" class="videos">
+        <h2>Vídeos Explicativos</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Slide anterior">❮</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-item">
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Full stack</span>
+                                <video class="video-frame" controls preload="metadata">
+                                    <source src="videos/introducao.mp4" type="video/mp4">
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Introdução</h3>
+                                <button class="watch-btn">Watch case</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Enterprise</span>
+                                <video class="video-frame" controls preload="metadata">
+                                    <source src="videos/conceitos-basicos.mp4" type="video/mp4">
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Conceitos Básicos</h3>
+                                <button class="watch-btn">Assistir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Full stack</span>
+                                <video class="video-frame" controls preload="metadata">
+                                    <source src="videos/projetos-praticos.mp4" type="video/mp4">
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Projetos Práticos</h3>
+                                <button class="watch-btn">Watch case</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Enterprise</span>
+                                <video class="video-frame" controls preload="metadata">
+                                    <source src="videos/avancado.mp4" type="video/mp4">
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Avançado</h3>
+                                <button class="watch-btn">Assistir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo slide">❯</button>
+        </div>
+    </section>
+
+    <!-- 6. Apresentação da equipe e do hub -->
+    <section id="course-team" class="course-team">
+        <div class="course-team-container">
+            <div class="course-team-left">
+                <h2>Nossos Integrantes</h2>
+                <div class="team-members">
+                    <div class="member">
+                        <img src="img/member1.png" alt="Membro 1">
+                        <h3>João Silva</h3>
+                        <p>Coordenador Geral</p>
+                    </div>
+                    <div class="member">
+                        <img src="img/member2.png" alt="Membro 2">
+                        <h3>Maria Santos</h3>
+                        <p>Desenvolvedora</p>
+                    </div>
+                    <div class="member">
+                        <img src="img/member3.png" alt="Membro 3">
+                        <h3>Pedro Oliveira</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-team-right">
+                <h2>Sobre o EducaLab</h2>
+                <p>O EducaLab é um hub de projetos e ferramentas para apoiar o dia a dia dos professores. Foi criado pela turma do 3º ano de Desenvolvimento de Sistemas da EEEP Deputado Roberto Mesquita.</p>
+                <ul class="course-features">
+                    <li>✓ Ferramentas para necessidades da rotina escolar</li>
+                    <li>✓ Projetos desenvolvidos pela turma</li>
+                    <li>✓ Soluções digitais para professores</li>
+                    <li>✓ Desenvolvimento colaborativo</li>
+                    <li>✓ Tecnologias aplicadas a problemas reais</li>
+                    <li>✓ Projetos da EEEP Deputado Roberto Mesquita</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Projetos -->
+    <section id="all-projects" class="all-projects">
+        <h2>Todos os Projetos</h2>
+        <div class="projects-filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+            <button class="filter-btn" onclick="filterProjects('redacao')">Redação</button>
+            <button class="filter-btn" onclick="filterProjects('notas')">Notas</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+            <div class="project-card" data-category="notas">
+                <img src="img/project10.png" alt="SIS-QUAL">
+                <h3>SIS-QUAL</h3>
+                <p>Sistema de qualificação e acompanhamento de projetos educacionais.</p>
+                <button class="btn btn-small" onclick="openProjectModal('sisQual')">Saiba Mais</button>
+            </div>
+            <div class="project-card" data-category="redacao">
+                <img src="img/project11.png" alt="Carraco Corrector">
+                <h3>Carraco Corrector</h3>
+                <p>Ferramenta web para revisão e correção de textos.</p>
+                <button class="btn btn-small" onclick="openProjectModal('carracoCorrector')">Saiba Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand-column">
+                <h4>EducaLab</h4>
+                <p>Ferramentas para professores, criadas pela turma do 3º ano de Desenvolvimento de Sistemas da EEEP Deputado Roberto Mesquita.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#featured-projects">Projetos</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#course-team">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-brand">EducaLab</div>
+    </footer>
+
+    <!-- Modal para Detalhes de Projetos -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <h2 id="modalTitle">Detalhes do Projeto</h2>
+            <p id="modalDescription">Descrição do projeto será exibida aqui.</p>
+            <a id="modalProjectLink" class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer" hidden>Acessar projeto</a>
+            <button class="btn btn-primary" onclick="closeProjectModal()">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
