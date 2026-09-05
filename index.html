@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="styles/carouselStyles.css">
     <link rel="stylesheet" href="styles/projectsStyles.css">
     <link rel="stylesheet" href="styles/footerStyles.css">
+    <link rel="stylesheet" href="styles/animations.css">
     
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <script src="js/projects.js" defer></script>
+    <script src="js/animations.js" defer></script>
 </head>
 <body>
     <!-- 1. Área Inicial -->
     <section id="hero" class="hero">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero-content">
             <h1 class="hero-title">EducaLab</h1>
             <p class="hero-subtitle">Laboratório de Educação Inovadora</p>
@@ -49,31 +52,29 @@
     <!-- 3. Explicação sobre o Projeto -->
     <section id="explanation" class="explanation">
         <div class="explanation-content">
-            <div class="explanation-text">
-                <h2>Sobre o EducaLab</h2>
-                <p class="explanation-item">
-                    <span class="dot"></span>
-                    O EducaLab é uma plataforma inovadora de educação
-                </p>
-                <p class="explanation-item">
-                    <span class="dot"></span>
-                    Oferecemos cursos práticos e projetos reais
-                </p>
-                <p class="explanation-item">
-                    <span class="dot"></span>
-                    Conectamos alunos com tecnologia de ponta
-                </p>
-                <p class="explanation-item">
-                    <span class="dot"></span>
-                    Desenvolvemos habilidades para o futuro
-                </p>
+            <div class="explanation-header">
+                <span class="eyebrow">EducaLab</span>
+                <h2>Transformamos aprendizado em experiência real</h2>
             </div>
-            <div class="explanation-dots">
-                <span class="dot-nav active" onclick="showExplanation(0)"></span>
-                <span class="dot-nav" onclick="showExplanation(1)"></span>
-                <span class="dot-nav" onclick="showExplanation(2)"></span>
-                <span class="dot-nav" onclick="showExplanation(3)"></span>
+
+            <div class="explainer-row" aria-label="Principais pilares do EducaLab">
+                <button class="explanation-pill active" data-copy="A plataforma combina ensino prático, projetos reais e desenvolvimento de habilidades para o futuro." aria-label="Aprendizado prático">
+                    ✦
+                </button>
+                <button class="explanation-pill" data-copy="Estruturamos trilhas de estudo em áreas de tecnologia com foco em aplicação direta do conhecimento." aria-label="Cursos estruturados">
+                    ⌁
+                </button>
+                <button class="explanation-pill" data-copy="Conectamos alunos, mentores e projetos para criar uma comunidade ativa de colaboração." aria-label="Comunidade">
+                    ○
+                </button>
+                <button class="explanation-pill" data-copy="Nossos projetos simulam desafios do mercado e ajudam a construir um portfólio relevante." aria-label="Projetos reais">
+                    ▣
+                </button>
             </div>
+
+            <p class="explanation-copy is-visible" aria-live="polite">
+                A plataforma combina ensino prático, projetos reais e desenvolvimento de habilidades para o futuro.
+            </p>
         </div>
     </section>
 
@@ -81,38 +82,125 @@
     <section id="featured-projects" class="featured-projects">
         <h2>Projetos em Destaque</h2>
         <div class="featured-grid">
-            <div class="featured-item">
+            <article class="featured-item">
                 <div class="featured-text">
                     <h3>Sistema de Gerenciamento</h3>
-                    <p>Plataforma completa para gerenciar projetos educacionais com interface intuitiva.</p>
+                    <p>Plataforma completa para gerenciar projetos educacionais com interface intuitiva, automações e dashboards de progresso.</p>
                     <button class="btn btn-outline" onclick="openProjectModal('sistema')">Ver Detalhes</button>
                 </div>
                 <div class="featured-image">
-                    <img src="img/project1.png" alt="Sistema de Gerenciamento">
+                    <div class="project-mockup" aria-label="Mockup do sistema de gerenciamento">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">dashboard</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">const</span> status = <span class="token-strong">"online"</span>;</div>
+                                <div class="terminal-line"><span class="token">return</span> <span class="token-alt">students</span>.<span class="token">active</span>();</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar"></div>
+                                    <div class="mini-rows">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 65%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 90%"></span>
+                                        <span style="width: 72%"></span>
+                                        <span style="width: 82%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="featured-item">
-                <div class="featured-image">
-                    <img src="img/project2.png" alt="Plataforma de Aprendizado">
-                </div>
+            <article class="featured-item">
                 <div class="featured-text">
                     <h3>Plataforma de Aprendizado</h3>
-                    <p>Ambiente interativo para alunos aprimorarem suas habilidades de programação.</p>
+                    <p>Ambiente interativo para alunos aprimorarem habilidades de programação por meio de desafios e avaliações em tempo real.</p>
                     <button class="btn btn-outline" onclick="openProjectModal('plataforma')">Ver Detalhes</button>
                 </div>
-            </div>
+                <div class="featured-image">
+                    <div class="project-mockup" aria-label="Mockup da plataforma de aprendizado">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">learning</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">course</span> = <span class="token-strong">"full stack"</span>;</div>
+                                <div class="terminal-line"><span class="token">module</span> = <span class="token-alt">"React + Node"</span>;</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 45%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 70%"></span>
+                                        <span style="width: 85%"></span>
+                                        <span style="width: 58%"></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 80%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 95%"></span>
+                                        <span style="width: 62%"></span>
+                                        <span style="width: 78%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-            <div class="featured-item">
+            <article class="featured-item">
                 <div class="featured-text">
                     <h3>Comunidade de Desenvolvedores</h3>
-                    <p>Rede colaborativa onde desenvolvedores compartilham conhecimento e projetos.</p>
+                    <p>Rede colaborativa para compartilhamento de conhecimento, soluções e projetos em torno de tecnologias emergentes.</p>
                     <button class="btn btn-outline" onclick="openProjectModal('comunidade')">Ver Detalhes</button>
                 </div>
                 <div class="featured-image">
-                    <img src="img/project3.png" alt="Comunidade de Desenvolvedores">
+                    <div class="project-mockup" aria-label="Mockup da comunidade de desenvolvedores">
+                        <div class="mockup-header">
+                            <div class="window-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-title">community</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="terminal-card">
+                                <div class="terminal-line"><span class="token">team</span>.<span class="token">review</span>(<span class="token-alt">"peer feedback"</span>);</div>
+                                <div class="terminal-line"><span class="token">share</span>(<span class="token-strong">"ideas"</span>);</div>
+                            </div>
+                            <div class="terminal-grid">
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 30%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 80%"></span>
+                                        <span style="width: 64%"></span>
+                                        <span style="width: 91%"></span>
+                                    </div>
+                                </div>
+                                <div class="mini-panel">
+                                    <div class="mini-bar" style="width: 55%"></div>
+                                    <div class="mini-rows">
+                                        <span style="width: 75%"></span>
+                                        <span style="width: 89%"></span>
+                                        <span style="width: 66%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -120,38 +208,62 @@
     <section id="videos" class="videos">
         <h2>Vídeos Explicativos</h2>
         <div class="carousel-container">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Slide anterior">❮</button>
             
             <div class="carousel-wrapper">
                 <div class="carousel" id="carousel">
                     <div class="carousel-item">
-                        <iframe width="100%" height="400" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            frameborder="0" allowfullscreen></iframe>
-                        <h3>Vídeo 1: Introdução</h3>
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Full stack</span>
+                                <iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Introdução</h3>
+                                <button class="watch-btn">Watch case</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="400" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            frameborder="0" allowfullscreen></iframe>
-                        <h3>Vídeo 2: Conceitos Básicos</h3>
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Enterprise</span>
+                                <iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Conceitos Básicos</h3>
+                                <button class="watch-btn">Assistir</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="400" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            frameborder="0" allowfullscreen></iframe>
-                        <h3>Vídeo 3: Projetos Práticos</h3>
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Full stack</span>
+                                <iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Projetos Práticos</h3>
+                                <button class="watch-btn">Watch case</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="400" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            frameborder="0" allowfullscreen></iframe>
-                        <h3>Vídeo 4: Avançado</h3>
+                        <div class="video-card">
+                            <div class="video-surface">
+                                <span class="video-chip">Enterprise</span>
+                                <iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-meta">
+                                <h3>Avançado</h3>
+                                <button class="watch-btn">Assistir</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo slide">❯</button>
         </div>
     </section>
 
@@ -246,11 +358,11 @@
     <!-- 8. Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
+            <div class="footer-column footer-brand-column">
                 <h4>EducaLab</h4>
                 <p>Transformando a educação através da tecnologia e inovação.</p>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h4>Links Rápidos</h4>
                 <ul>
                     <li><a href="#hero">Início</a></li>
@@ -259,20 +371,16 @@
                     <li><a href="#course-team">Sobre</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h4>Contato</h4>
-                <p>Email: contato@educalab.com</p>
-                <p>Telefone: (11) 9999-9999</p>
-            </div>
-            <div class="footer-section">
-                <h4>Redes Sociais</h4>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="mailto:contato@educalab.com">contato@educalab.com</a></li>
+                    <li><a href="tel:+5511999999999">(11) 9999-9999</a></li>
                     <li><a href="#">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer-brand">EducaLab</div>
         <div class="footer-bottom">
             <p>&copy; 2024 EducaLab. Todos os direitos reservados.</p>
         </div>
