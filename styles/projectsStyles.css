@@ -160,6 +160,10 @@
     margin-top: 1rem;
 }
 
+.modal-content .btn + .btn {
+    margin-left: 0.75rem;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .course-team-container {

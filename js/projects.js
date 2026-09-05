@@ -26,44 +26,31 @@ function openProjectModal(projectId) {
     const modal = document.getElementById('projectModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDescription = document.getElementById('modalDescription');
+    const modalProjectLink = document.getElementById('modalProjectLink');
     
     // Dados dos projetos
     const projectData = {
         sistema: {
             title: 'Sistema de Gerenciamento',
-            description: 'Plataforma completa para gerenciar projetos educacionais com interface intuitiva e funcionalidades avançadas. Desenvolvida com tecnologias modernas de frontend e backend, oferecendo autenticação segura, dashboard interativo e relatórios detalhados.'
+            description: 'Ferramenta para organizar projetos educacionais com interface intuitiva, automações, painel de progresso e relatórios para apoiar a rotina dos professores.'
         },
         plataforma: {
-            title: 'Plataforma de Aprendizado',
-            description: 'Ambiente interativo para alunos aprimorarem suas habilidades de programação. Conta com cursos estruturados, exercícios práticos, avaliações automáticas e acompanhamento de progresso em tempo real.'
+            title: 'Ferramenta de Apoio Pedagógico',
+            description: 'Ambiente interativo para apoiar o planejamento e o acompanhamento de atividades pedagógicas no dia a dia dos professores.'
         },
         comunidade: {
-            title: 'Comunidade de Desenvolvedores',
-            description: 'Rede colaborativa onde desenvolvedores compartilham conhecimento, projetos e experiências. Oferece fóruns de discussão, grupos de estudo, eventos virtuais e oportunidades de networking.'
+            title: 'Central de Ferramentas',
+            description: 'Espaço colaborativo para reunir soluções digitais e projetos desenvolvidos para apoiar a comunidade escolar.'
         },
-        web1: {
-            title: 'Projeto Web 1 - Landing Page Moderna',
-            description: 'Landing page responsiva e moderna desenvolvida com HTML5, CSS3 e JavaScript vanilla. Possui animações fluidas, design minimalista e otimização para SEO.'
+        sisQual: {
+            title: 'SIS-QUAL',
+            description: 'Sistema de qualificação e acompanhamento de projetos educacionais.',
+            url: 'https://sis-qual.lovable.app/'
         },
-        mobile1: {
-            title: 'Projeto Mobile 1 - App de Tarefas',
-            description: 'Aplicativo mobile para gerenciamento de tarefas com sincronização em nuvem. Desenvolvido com React Native, oferecendo experiência nativa em iOS e Android.'
-        },
-        backend1: {
-            title: 'Projeto Backend 1 - API RESTful',
-            description: 'API RESTful completa desenvolvida com Node.js e Express. Inclui autenticação JWT, validação de dados, documentação com Swagger e testes automatizados.'
-        },
-        web2: {
-            title: 'Projeto Web 2 - Dashboard Interativo',
-            description: 'Dashboard interativo para análise de dados com gráficos dinâmicos. Utiliza React, Recharts e Redux para gerenciamento de estado avançado.'
-        },
-        mobile2: {
-            title: 'Projeto Mobile 2 - App de Saúde',
-            description: 'Aplicativo de saúde e bem-estar com rastreamento de atividades físicas, monitoramento de saúde e integração com wearables.'
-        },
-        backend2: {
-            title: 'Projeto Backend 2 - Sistema de Autenticação',
-            description: 'Sistema robusto de autenticação e autorização com suporte a OAuth2, SSO e autenticação de dois fatores.'
+        carracoCorrector: {
+            title: 'Carraco Corrector',
+            description: 'Ferramenta web para revisão e correção de textos.',
+            url: 'https://carraco-corrector.lovable.app/'
         }
     };
     
@@ -72,6 +59,8 @@ function openProjectModal(projectId) {
     if (project) {
         modalTitle.textContent = project.title;
         modalDescription.textContent = project.description;
+        modalProjectLink.href = project.url || '#';
+        modalProjectLink.hidden = !project.url;
         modal.classList.add('active');
     }
 }
