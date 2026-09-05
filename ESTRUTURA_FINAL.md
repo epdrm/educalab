@@ -30,6 +30,9 @@ educalab/
 ├── /img/                          # Pasta de imagens [CRIADO ✅]
 │   └── (imagens serão adicionadas)
 │
+├── /videos/                        # Arquivos de vídeo locais [CRIADO ✅]
+│   └── (vídeos serão adicionados)
+│
 └── /docs/
     └── README.md                  # Documentação original do projeto
 ```
@@ -91,8 +94,6 @@ educalab/
 - [x] 8. Footer
   - [x] Texto informativo
   - [x] Links rápidos
-  - [x] Contato
-  - [x] Redes sociais
 
 **Status:** 8/8 ✅ COMPLETO
 
@@ -205,7 +206,7 @@ educalab/
 - [x] Drag/swipe no carrossel
 
 ### 🎬 Conteúdo Multimídia
-- [x] Vídeos do YouTube incorporados
+- [x] Vídeos locais na pasta `/videos/`
 - [x] Suporte a imagens
 - [x] Placeholders para customização
 
@@ -256,7 +257,6 @@ python -m http.server 8000
 - [ ] Adicionar backend
 - [ ] Sistema de autenticação
 - [ ] Banco de dados
-- [ ] Formulário de contato
 - [ ] Analytics
 - [ ] PWA
 - [ ] Otimização SEO avançada

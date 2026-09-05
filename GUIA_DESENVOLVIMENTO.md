@@ -36,12 +36,18 @@ educalab/
 │   ├── carousel.js        # Carrossel
 │   └── projects.js        # Filtros e modais
 │
-└── /img/                   # Imagens
+├── /img/                   # Imagens
     ├── project1.png
     ├── project2.png
     ├── member1.png
     ├── member2.png
     └── ...
+└── /videos/                # Arquivos de vídeo locais
+    ├── video-principal.mp4
+    ├── introducao.mp4
+    ├── conceitos-basicos.mp4
+    ├── projetos-praticos.mp4
+    └── avancado.mp4
 ```
 
 ### 3. Personalizar Cores
@@ -98,11 +104,12 @@ const projectData = {
 
 ### 8. Adicionar Vídeos Personalizados
 
-Substitua os IDs dos vídeos do YouTube no `index.html`:
+Coloque os arquivos `.mp4` na pasta `/videos/` e atualize os caminhos dos elementos `<source>` no `index.html`:
 
 ```html
-<!-- Trocar dQw4w9WgXcQ pelo ID do seu vídeo -->
-<iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID"></iframe>
+<video controls>
+    <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
 ```
 
 ### 9. Funcionalidades JavaScript
@@ -204,22 +211,14 @@ npm install -g vercel
 vercel
 ```
 
-### 14. Adicionar Formulário de Contato
-
-Para adicionar um formulário:
-
-1. Instale uma ferramenta como Formspree ou EmailJS
-2. Adicione o formulário HTML
-3. Configure a integração no JavaScript
-
-### 15. Otimizações Recomendadas
+### 14. Otimizações Recomendadas
 
 - **Compactar imagens**: Use TinyPNG ou ImageOptim
 - **Minificar CSS/JS**: Use CSSNano ou UglifyJS
 - **SEO**: Adicione meta tags em `<head>`
 - **Performance**: Use Lighthouse do Chrome DevTools
 
-### 16. Troubleshooting
+### 15. Troubleshooting
 
 **Problema**: Imagens não carregam
 - Verifique se os caminhos em `img/` estão corretos

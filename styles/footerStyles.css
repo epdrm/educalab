@@ -10,7 +10,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -49,22 +50,11 @@
     color: var(--primary-color);
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
-    text-align: center;
-    color: var(--gray);
-}
-
-.footer-bottom p {
-    font-size: var(--font-size-sm);
-    margin: 0;
-}
-
 /* Responsivo */
 @media (max-width: 768px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
         gap: 2rem;
     }
 

@@ -12,6 +12,7 @@ Criadas as seguintes pastas:
 - `/styles/` - Arquivos CSS
 - `/js/` - Arquivos JavaScript
 - `/img/` - Pasta para imagens
+- `/videos/` - Pasta para vídeos locais
 
 Arquivo principal:
 - `index.html` - Página HTML completa
@@ -28,7 +29,7 @@ Implementadas todas as 8 seções conforme especificado:
    - Background gradiente com animações
 
 2. **Vídeo Principal** ✅
-   - Incorporação de vídeo do YouTube
+   - Reprodução de vídeo local
    - Responsivo e com boa apresentação
 
 3. **Explicação sobre o Projeto** ✅
@@ -59,8 +60,6 @@ Implementadas todas as 8 seções conforme especificado:
 8. **Footer** ✅
    - Informações da empresa
    - Links rápidos
-   - Dados de contato
-   - Redes sociais
 
 ---
 
@@ -188,7 +187,7 @@ Criados 3 arquivos JavaScript:
 - Adicionar backend para gerenciamento de conteúdo
 - Implementar sistema de autenticação
 - Adicionar banco de dados
-- Integrar com email para formulário de contato
+- Adicionar novos vídeos à pasta `/videos/`
 - Otimizar SEO
 - Implementar PWA (Progressive Web App)
 

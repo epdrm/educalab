@@ -5,10 +5,7 @@ Este projeto foi desenvolvido utilizando HTML5, CSS3 e JavaScript vanilla, sem d
 
 As únicas referências externas utilizadas são:
 
-1. YouTube Embed API - https://www.youtube.com/embed/
-   - Utilizada para incorporar vídeos do YouTube diretamente na página
-
-2. Google Fonts (Poppins) - https://fonts.google.com/specimen/Poppins
+1. Google Fonts (Poppins) - https://fonts.google.com/specimen/Poppins
    - Opcional: Para aprimorar a tipografia, pode ser adicionada via:
    - <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -39,6 +36,8 @@ ESTRUTURA DO PROJETO:
 
 - /img/: Pasta para imagens do projeto
   - Substituir imagens de placeholder conforme necessário
+- /videos/: Pasta para os arquivos de vídeo locais do projeto
+  - Adicionar arquivos .mp4 e atualizar os caminhos no index.html
 
 COMO ADICIONAR BIBLIOTECAS (OPCIONAL):
 Se no futuro desejar adicionar bibliotecas, aqui estão algumas recomendações:

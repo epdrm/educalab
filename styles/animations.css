@@ -1,21 +1,21 @@
 /* Estilos refinados para aproximar o EducaLab ao padrão visual do Google Antigravity */
 
 :root {
-    --antigravity-bg: #070d19;
-    --antigravity-ink: #e6ecff;
-    --antigravity-panel: rgba(12, 18, 30, 0.72);
-    --antigravity-border: rgba(150, 170, 255, 0.18);
-    --antigravity-accent: #5ea5ff;
-    --antigravity-accent-strong: #4d8dff;
-    --antigravity-soft: #f3f6ff;
-    --antigravity-surface: #eff5ff;
-    --antigravity-muted: rgba(128, 143, 176, 0.85);
-    --antigravity-shadow: 0 24px 60px rgba(4, 11, 24, 0.22);
+    --educaLab-bg: #070d19;
+    --educaLab-ink: #000000;
+    --educaLab-panel: rgba(12, 18, 30, 0.72);
+    --educaLab-border: rgba(150, 170, 255, 0.18);
+    --educaLab-accent: #5ea5ff;
+    --educaLab-accent-strong: #4d8dff;
+    --educaLab-soft: #f3f6ff;
+    --educaLab-surface: #eff5ff;
+    --educaLab-muted: rgba(128, 143, 176, 0.85);
+    --educaLab-shadow: 0 24px 60px rgba(4, 11, 24, 0.22);
 }
 
 body {
-    background: var(--antigravity-bg);
-    color: var(--antigravity-ink);
+    background: var(--educaLab-bg);
+    color: var(--educaLab-ink);
 }
 
 .hero {
@@ -24,8 +24,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--antigravity-bg);
-    color: var(--antigravity-ink);
+    background: var(--educaLab-bg);
+    color: var(--educaLab-ink);
     overflow: hidden;
     isolation: isolate;
 }
@@ -272,7 +272,7 @@ body {
     background: linear-gradient(180deg, rgba(16, 22, 36, 0.96), rgba(8, 13, 24, 0.98));
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 1.75rem;
-    box-shadow: var(--antigravity-shadow);
+    box-shadow: var(--educaLab-shadow);
     overflow: hidden;
 }
 
@@ -632,8 +632,8 @@ body {
 .footer-content {
     max-width: 1180px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 2rem;
     align-items: flex-start;
 }
@@ -679,16 +679,6 @@ body {
     color: #f0f6ff;
 }
 
-.footer-bottom {
-    max-width: 1180px;
-    margin: 2rem auto 0;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(217, 226, 255, 0.1);
-    color: rgba(216, 228, 255, 0.67);
-    text-align: left;
-    font-size: 0.84rem;
-}
-
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -708,7 +698,7 @@ body {
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 }
 
