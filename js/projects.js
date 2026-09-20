@@ -1,23 +1,21 @@
 /* Projects.js - Sistema de Filtros e Modais de Projetos */
 
 // Filtrar projetos por categoria
-function filterProjects(category) {
+function filterProjects(category, event) {
     const cards = document.querySelectorAll('.project-card');
     const buttons = document.querySelectorAll('.filter-btn');
-    
+    const trigger = event && event.currentTarget ? event.currentTarget : Array.from(buttons).find(btn => btn.dataset.category === category);
+
     // Atualizar botão ativo
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
+    if (trigger) {
+        trigger.classList.add('active');
+    }
+
     // Filtrar cards
     cards.forEach(card => {
-        card.classList.remove('visible');
-        
-        if (category === 'all') {
-            card.classList.add('visible');
-        } else if (card.dataset.category === category) {
-            card.classList.add('visible');
-        }
+        const matches = category === 'all' || card.dataset.category === category;
+        card.classList.toggle('visible', matches);
     });
 }
 
@@ -30,18 +28,6 @@ function openProjectModal(projectId) {
     
     // Dados dos projetos
     const projectData = {
-        sistema: {
-            title: 'Sistema de Gerenciamento',
-            description: 'Ferramenta para organizar projetos educacionais com interface intuitiva, automações, painel de progresso e relatórios para apoiar a rotina dos professores.'
-        },
-        plataforma: {
-            title: 'Ferramenta de Apoio Pedagógico',
-            description: 'Ambiente interativo para apoiar o planejamento e o acompanhamento de atividades pedagógicas no dia a dia dos professores.'
-        },
-        comunidade: {
-            title: 'Central de Ferramentas',
-            description: 'Espaço colaborativo para reunir soluções digitais e projetos desenvolvidos para apoiar a comunidade escolar.'
-        },
         sisQual: {
             title: 'SIS-QUAL',
             description: 'Sistema de qualificação e acompanhamento de projetos educacionais.',
@@ -51,7 +37,17 @@ function openProjectModal(projectId) {
             title: 'Carraco Corrector',
             description: 'Ferramenta web para revisão e correção de textos.',
             url: 'https://carraco-corrector.lovable.app/'
-        }
+        },
+        qualiNotas: {
+            title: 'QualiNotas',
+            description: 'Sistema de gestão e análise de desempenho acadêmico.',
+            url: 'https://yasminsilvaaa.github.io/QualiNotas/'
+        },
+        logicTech: {
+            title: 'LogicTech',
+            description: 'Sistema de gestão e análise de desempenho acadêmico.',
+            url: 'https://helder650.github.io/projeto-gestao-de-startup-2/'
+        },
     };
     
     const project = projectData[projectId];

@@ -25,19 +25,15 @@ ESTRUTURA DO PROJETO:
   - fontsStyles.css: Variáveis de tipografia
   - mainStyles.css: Estilos gerais
   - heroStyles.css: Estilos da seção hero
-  - carouselStyles.css: Estilos do carrossel
   - projectsStyles.css: Estilos dos projetos e modais
   - footerStyles.css: Estilos do footer
 
 - /js/: Arquivos JavaScript organizados por funcionalidade
   - main.js: Funcionalidades principais
-  - carousel.js: Controle do carrossel
   - projects.js: Filtros e modais
 
 - /img/: Pasta para imagens do projeto
   - Substituir imagens de placeholder conforme necessário
-- /videos/: Pasta para os arquivos de vídeo locais do projeto
-  - Adicionar arquivos .mp4 e atualizar os caminhos no index.html
 
 COMO ADICIONAR BIBLIOTECAS (OPCIONAL):
 Se no futuro desejar adicionar bibliotecas, aqui estão algumas recomendações:
@@ -53,5 +49,5 @@ Se no futuro desejar adicionar bibliotecas, aqui estão algumas recomendações:
 NOTES:
 - O projeto é totalmente responsivo para desktop, tablet e mobile
 - Usa variáveis CSS para fácil customização de cores e fontes
-- Implementa smooth scroll, carrossel funcional, filtros e modais
+- Implementa smooth scroll, filtros e modais
 - Pronto para adicionar backend e autenticação quando necessário

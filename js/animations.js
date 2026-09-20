@@ -108,6 +108,97 @@ if (heroCanvas) {
 const explanationPills = document.querySelectorAll('.explanation-pill');
 const explanationCopy = document.querySelector('.explanation-copy');
 
+const teamParticleCanvases = document.querySelectorAll('.team-particle-canvas');
+
+teamParticleCanvases.forEach((canvas) => {
+  const panel = canvas.parentElement;
+  const context = canvas.getContext('2d');
+  const particles = [];
+  const shapeCanvas = document.createElement('canvas');
+  const shapeContext = shapeCanvas.getContext('2d');
+  let width = 0;
+  let height = 0;
+  let targetPoints = [];
+  let isHovered = false;
+
+  function createTargetPoints() {
+    const fontSize = Math.max(64, Math.min(width * 0.38, height * 0.36));
+    shapeCanvas.width = width;
+    shapeCanvas.height = height;
+    shapeContext.clearRect(0, 0, width, height);
+    shapeContext.fillStyle = '#000';
+    shapeContext.font = `800 ${fontSize}px monospace`;
+    shapeContext.textAlign = 'center';
+    shapeContext.textBaseline = 'middle';
+    shapeContext.fillText(canvas.dataset.particleShape, width / 2, height / 2 - fontSize * 0.06);
+
+    const pixels = shapeContext.getImageData(0, 0, width, height).data;
+    targetPoints = [];
+    const step = Math.max(2, Math.round(width / 160));
+
+    for (let y = 0; y < height; y += step) {
+      for (let x = 0; x < width; x += step) {
+        if (pixels[(y * width + x) * 4 + 3] > 100) {
+          targetPoints.push({ x, y });
+        }
+      }
+    }
+  }
+
+  function resize() {
+    width = panel.clientWidth;
+    height = panel.clientHeight;
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = width * ratio;
+    canvas.height = height * ratio;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    createTargetPoints();
+
+    particles.forEach((particle, index) => {
+      particle.target = targetPoints[index % targetPoints.length];
+    });
+  }
+
+  function createParticles() {
+    const particleCount = Math.min(1200, Math.max(240, Math.round(width * 2.4)));
+    for (let index = 0; index < particleCount; index += 1) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        target: targetPoints[index % targetPoints.length],
+        size: Math.random() * 1.4 + 0.7,
+        alpha: Math.random() * 0.45 + 0.25,
+        drift: Math.random() * Math.PI * 2,
+      });
+    }
+  }
+
+  function animate() {
+    context.clearRect(0, 0, width, height);
+    particles.forEach((particle) => {
+      particle.drift += 0.018;
+      const targetX = isHovered ? particle.target.x : width / 2 + Math.cos(particle.drift) * width * 0.46;
+      const targetY = isHovered ? particle.target.y : height / 2 + Math.sin(particle.drift * 1.3) * height * 0.42;
+      particle.x += (targetX - particle.x) * (isHovered ? 0.075 : 0.012);
+      particle.y += (targetY - particle.y) * (isHovered ? 0.075 : 0.012);
+      context.beginPath();
+      context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      context.fillStyle = `rgba(37, 99, 235, ${particle.alpha})`;
+      context.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  panel.addEventListener('mouseenter', () => { isHovered = true; });
+  panel.addEventListener('mouseleave', () => { isHovered = false; });
+  resize();
+  createParticles();
+  window.addEventListener('resize', resize);
+  animate();
+});
+
 if (explanationPills.length && explanationCopy) {
   explanationPills.forEach((pill) => {
     pill.addEventListener('mouseenter', () => {

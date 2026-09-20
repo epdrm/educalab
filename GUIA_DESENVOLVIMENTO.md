@@ -27,13 +27,11 @@ educalab/
 │   ├── fontsStyles.css     # Variáveis de tipografia
 │   ├── mainStyles.css      # Estilos gerais
 │   ├── heroStyles.css      # Seção hero
-│   ├── carouselStyles.css  # Carrossel e projetos
 │   ├── projectsStyles.css  # Projetos e modais
 │   └── footerStyles.css    # Footer
 │
 ├── /js/                    # Scripts JavaScript
 │   ├── main.js            # Funcionalidades principais
-│   ├── carousel.js        # Carrossel
 │   └── projects.js        # Filtros e modais
 │
 ├── /img/                   # Imagens
@@ -42,12 +40,7 @@ educalab/
     ├── member1.png
     ├── member2.png
     └── ...
-└── /videos/                # Arquivos de vídeo locais
-    ├── video-principal.mp4
-    ├── introducao.mp4
-    ├── conceitos-basicos.mp4
-    ├── projetos-praticos.mp4
-    └── avancado.mp4
+└── /img/                  # Pasta de imagens do projeto
 ```
 
 ### 3. Personalizar Cores
@@ -102,17 +95,7 @@ const projectData = {
 };
 ```
 
-### 8. Adicionar Vídeos Personalizados
-
-Coloque os arquivos `.mp4` na pasta `/videos/` e atualize os caminhos dos elementos `<source>` no `index.html`:
-
-```html
-<video controls>
-    <source src="videos/meu-video.mp4" type="video/mp4">
-</video>
-```
-
-### 9. Funcionalidades JavaScript
+### 8. Funcionalidades JavaScript
 
 #### Rolar para uma seção:
 ```javascript
@@ -122,11 +105,6 @@ scrollToSection('featured-projects');
 #### Mostrar explicação específica:
 ```javascript
 showExplanation(0);  // 0, 1, 2, 3
-```
-
-#### Mover carrossel:
-```javascript
-moveCarousel(1);   // 1 para frente, -1 para trás
 ```
 
 #### Filtrar projetos:
@@ -227,10 +205,6 @@ vercel
 **Problema**: Estilos não aplicam
 - Limpe o cache do navegador (Ctrl+Shift+Delete)
 - Verifique se os arquivos CSS estão linkados
-
-**Problema**: Carrossel não funciona
-- Abra o Console (F12) e procure por erros
-- Verifique se o `carousel.js` está carregado
 
 **Problema**: Modais não abrem
 - Verifique se o ID do projeto existe em `projects.js`

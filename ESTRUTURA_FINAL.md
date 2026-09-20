@@ -18,20 +18,15 @@ educalab/
 │   ├── fontsStyles.css            # Tipografia [CRIADO ✅]
 │   ├── mainStyles.css             # Estilos gerais [CRIADO ✅]
 │   ├── heroStyles.css             # Seção hero [CRIADO ✅]
-│   ├── carouselStyles.css         # Carrossel e projetos [CRIADO ✅]
 │   ├── projectsStyles.css         # Projetos e modais [CRIADO ✅]
 │   └── footerStyles.css           # Footer [CRIADO ✅]
 │
 ├── /js/                           # Pasta de scripts [CRIADO ✅]
 │   ├── main.js                    # Funcionalidades principais [CRIADO ✅]
-│   ├── carousel.js                # Carrossel de vídeos [CRIADO ✅]
 │   └── projects.js                # Filtros e modais [CRIADO ✅]
 │
 ├── /img/                          # Pasta de imagens [CRIADO ✅]
 │   └── (imagens serão adicionadas)
-│
-├── /videos/                        # Arquivos de vídeo locais [CRIADO ✅]
-│   └── (vídeos serão adicionados)
 │
 └── /docs/
     └── README.md                  # Documentação original do projeto
@@ -57,15 +52,9 @@ educalab/
 - [x] 1. Área Inicial (Hero)
   - [x] Nome grande no centro
   - [x] Botão para "Projetos em Destaque"
-  - [x] Botão para "Vídeos Explicativos"
   - [x] Design atrativo com gradiente
 
-- [x] 2. Vídeo Principal
-  - [x] Um vídeo embedded
-  - [x] Título da seção
-  - [x] Responsivo
-
-- [x] 3. Explicação sobre o Projeto
+- [x] 2. Explicação sobre o Projeto
   - [x] Frases descritivas
   - [x] Bolinhas em linha para navegação
   - [x] Layout limpo
@@ -76,12 +65,7 @@ educalab/
   - [x] Imagem do projeto
   - [x] Botão "Ver Detalhes"
 
-- [x] 5. Vídeos Explicativos
-  - [x] Carrossel de vídeos
-  - [x] Navegação com setas
-  - [x] Suporte a drag/swipe
-
-- [x] 6. Apresentação do Curso e Integrantes
+- [x] 5. Apresentação do Curso e Integrantes
   - [x] Lista de integrantes (esquerda)
   - [x] Informações sobre o curso (direita)
   - [x] Cards com fotos
@@ -126,15 +110,7 @@ educalab/
 - [x] **heroStyles.css**
   - [x] Seção hero com animações
   - [x] Botões especializados
-  - [x] Video principal responsivo
   - [x] Efeitos de flutuação
-
-- [x] **carouselStyles.css**
-  - [x] Carrossel funcional
-  - [x] Projetos destacados
-  - [x] Sistema de filtros
-  - [x] Grid de projetos
-  - [x] Media queries responsivas
 
 - [x] **projectsStyles.css**
   - [x] Cards de projetos
@@ -159,12 +135,6 @@ educalab/
   - [x] Rolagem suave (smooth scroll)
   - [x] Navegação de explicações com bolinhas
   - [x] Sistema de eventos
-
-- [x] **carousel.js**
-  - [x] Controle de carrossel com setas
-  - [x] Navegação programática
-  - [x] Suporte a drag/swipe
-  - [x] Transições suaves
 
 - [x] **projects.js**
   - [x] Sistema de filtros por categoria
@@ -199,16 +169,9 @@ educalab/
 ### 🎯 Interatividade
 - [x] Smooth scroll entre seções
 - [x] Navegação interativa (bolinhas)
-- [x] Carrossel funcional
 - [x] Sistema de filtros
 - [x] Modais com detalhes
 - [x] Suporte a teclado (ESC)
-- [x] Drag/swipe no carrossel
-
-### 🎬 Conteúdo Multimídia
-- [x] Vídeos locais na pasta `/videos/`
-- [x] Suporte a imagens
-- [x] Placeholders para customização
 
 ### ⚙️ Organização do Código
 - [x] CSS modularizado por tema
