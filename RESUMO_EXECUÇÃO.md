@@ -12,7 +12,6 @@ Criadas as seguintes pastas:
 - `/styles/` - Arquivos CSS
 - `/js/` - Arquivos JavaScript
 - `/img/` - Pasta para imagens
-- `/videos/` - Pasta para vídeos locais
 
 Arquivo principal:
 - `index.html` - Página HTML completa
@@ -25,14 +24,10 @@ Implementadas todas as 8 seções conforme especificado:
 
 1. **Área Inicial (Hero)** ✅
    - Título grande "EducaLab"
-   - Dois botões: "Projetos em Destaque" e "Vídeos Explicativos"
+   - Botão para "Projetos em Destaque"
    - Background gradiente com animações
 
-2. **Vídeo Principal** ✅
-   - Reprodução de vídeo local
-   - Responsivo e com boa apresentação
-
-3. **Explicação sobre o Projeto** ✅
+2. **Explicação sobre o Projeto** ✅
    - Frases descritivas
    - Bolinhas em linha para navegação interativa
    - Sistema funcional de exibição
@@ -42,12 +37,7 @@ Implementadas todas as 8 seções conforme especificado:
    - Layout alternado (texto-imagem)
    - Botões "Ver Detalhes"
 
-5. **Vídeos Explicativos** ✅
-   - Carrossel funcional de 4 vídeos
-   - Navegação com setas
-   - Suporte a drag/swipe
-
-6. **Apresentação do Curso e Integrantes** ✅
+5. **Apresentação do Curso e Integrantes** ✅
    - 3 integrantes da equipe
    - Informações sobre o curso
    - Lista de recursos e benefícios
@@ -88,13 +78,7 @@ Criados 7 arquivos CSS organizados por tema:
    - Botões especializados
    - Efeitos de flutuação
 
-5. **carouselStyles.css** ✅
-   - Estilos do carrossel
-   - Seção de projetos destacados
-   - Sistema de filtros
-   - Grid de projetos
-
-6. **projectsStyles.css** ✅
+5. **projectsStyles.css** ✅
    - Cards de projetos
    - Equipe e curso
    - Modal funcional
@@ -116,13 +100,7 @@ Criados 3 arquivos JavaScript:
    - Navegação de explicações com bolinhas
    - Efeitos de scroll
 
-2. **carousel.js** ✅
-   - Controle interativo do carrossel
-   - Navegação com setas
-   - Suporte a drag/swipe
-   - Transições suaves
-
-3. **projects.js** ✅
+2. **projects.js** ✅
    - Sistema de filtros por categoria
    - Abertura/fechamento de modais
    - Detalhes dinâmicos de projetos
@@ -187,7 +165,6 @@ Criados 3 arquivos JavaScript:
 - Adicionar backend para gerenciamento de conteúdo
 - Implementar sistema de autenticação
 - Adicionar banco de dados
-- Adicionar novos vídeos à pasta `/videos/`
 - Otimizar SEO
 - Implementar PWA (Progressive Web App)
 

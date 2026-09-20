@@ -21,7 +21,6 @@ projeto
 ┣ /styles
 ┣ /js 
 ┣ /img 
-┣ /videos
 ┣ index.html 
 ┃ 
 ```
@@ -30,23 +29,19 @@ projeto
 
 - Fazer a estruturação do html baseado na pagina do https://antigravity.google/ no qual deve seguir essa estuturação da página:
 
-    1. Área inicial: na area inicial é necessário tenha um nome grande no centro da tela e dois botões pequenos um passando para 
-       a secção de projetos destaques e outro para a secção de videos
+    1. Área inicial: na area inicial é necessário tenha um nome grande no centro da tela e dois botões pequenos, um passando para 
+       a secção de projetos em destaque
 
-    2. Video principal: Nesta parte haverá um unico video 
+    2. Explicação sobre o projeto: Área para frases e umas pequenas bolinhas em linha
 
-    3. Explicação sobre o projeto: Área para frases e umas pequenas bolinhas em linha
+    3. Projetos em Destaque: Área para alguns projetos, uma descrição a esquerda e á imagem do projeto á direita
 
-    4. Projetos em Destaque: Área para alguns projetos, uma descrição a esquerda e á imagem do projeto á direita
-
-    5. Videos explicativos: Área para um carrosel de videos explicativos
-
-    6. Apresentação do curso e integrantes: Área onde na esquerda será para a apresentação dos integrantes
+    4. Apresentação do curso e integrantes: Área onde na esquerda será para a apresentação dos integrantes
        e a direita para apresentação sobre algumas coisas do curso
 
-    7. Projetos: Área mostrando todos os projetos
+    5. Projetos: Área mostrando todos os projetos
 
-    8. Footer: Um footer com texto informativo e links rápidos
+    6. Footer: Um footer com texto informativo e links rápidos
 
 - A estruturação na formação da pagina deve seguir essa ordem.
 
@@ -71,6 +66,6 @@ projeto
    
     2. Controle interativo de exibição para a área de Explicação (navegação pelas bolinhas em linha).
    
-    3. Carrossel funcional para a seção de Vídeos Explicativos (com suporte a navegação por setas/drag).
+    3. Sistema de filtros ou modais de detalhes para a área de Projetos.
    
     4. Sistema de filtros ou modais de detalhes para a área de Projetos.
