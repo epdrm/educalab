@@ -16,6 +16,31 @@
     margin-bottom: 2rem;
 }
 
+.footer-column .gitHub {
+    display: block;
+    width: min(100%, 15rem);
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.footer-column .gitHub img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: screen;
+}
+
+.footer-column .gitHub:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer-column .gitHub:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
 .footer-section h4 {
     font-size: var(--font-size-h5);
     margin-bottom: 1rem;
