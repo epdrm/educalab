@@ -1,0 +1,39 @@
+name:  Relatório de Bug
+description: Relate um problema para nos ajudar a corrigi-lo.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar um bug! Por favor, preencha os campos abaixo para nos ajudar a entender o problema.
+  - type: textarea
+    id: o-que-aconteceu
+    attributes:
+      label: Descrição do Problema
+      description: Descreva claramente o que aconteceu.
+      placeholder: "Ocorre o erro X quando tento fazer Y..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para Reproduzir
+      description: Liste os passos necessários para reproduzir o comportamento.
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Role até '...'
+        4. Veja o erro
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist-revisao
+    attributes:
+      label: Checklist de Revisão
+      description: Confirme que você realizou estas etapas antes de abrir a issue.
+      options:
+        - label: Certifiquei-me de que este bug já não foi relatado (consulte as issues abertas).
+          required: true
+        - label: O problema ocorre na versão mais recente do projeto.
+          required: true

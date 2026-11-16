@@ -1,0 +1,34 @@
+name:  Sugestão / Criação de Conteúdo
+description: Proponha novos conteúdos ou correções em materiais existentes.
+title: "[Conteúdo]: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tem uma sugestão de novo conteúdo ou encontrou desatualizações em um material existente? Conte-nos!
+  - type: dropdown
+    id: tipo-conteudo
+    attributes:
+      label: Tipo de Conteúdo
+      options:
+        - Novo Conteúdo / Artigo
+        - Atualização de Conteúdo Existente
+        - Correção de Erro de Digitação / Português
+    validations:
+      required: true
+  - type: textarea
+    id: detalhes
+    attributes:
+      label: Detalhes do Conteúdo
+      description: Descreva sobre o que é o conteúdo ou onde está o erro.
+      placeholder: "O tópico abordado deveria incluir..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist-revisao
+    attributes:
+      label: Checklist de Revisão
+      options:
+        - label: O conteúdo é original ou possui devidas referências/citações.
+          required: true

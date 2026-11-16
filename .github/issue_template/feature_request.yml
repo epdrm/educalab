@@ -1,0 +1,32 @@
+name:  Sugestão de Melhoria
+description: Sugira uma ideia ou melhoria para o projeto.
+title: "[Melhoria]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma melhoria! Como podemos tornar este projeto melhor?
+  - type: textarea
+    id: problema
+    attributes:
+      label: O problema
+      description: Descreva o problema atual que esta melhoria resolve.
+      placeholder: "Estou frustrado quando tento fazer X porque Y..."
+    validations:
+      required: true
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução Proposta
+      description: Descreva o que você gostaria que acontecesse.
+      placeholder: "Gostaria que houvesse uma opção para..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist-revisao
+    attributes:
+      label: Checklist de Revisão
+      options:
+        - label: Verifiquei se já existe uma solicitação semelhante aberta.
+          required: true
