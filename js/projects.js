@@ -66,7 +66,7 @@ function openProjectModal(projectId) {
         drmquest: {
             title: 'Drmquest',
             description: 'O DRM Quest é o ecossistema educacional oficial da EEEP Deputado Roberto Mesquita. Ele automatiza a parte mecânica do trabalho pedagógico — pesquisa, diagramação e gabarito — para que professores invistam o tempo onde importa: mediar a aprendizagem. Alunos ganham simulados personalizados com correção imediata e justificativas construídas a partir de questões reais de vestibulares.',
-            url: 'https://lucsquestion-3ds.lovable.app',
+            url: 'https://lucsquestion-ds3.lovable.app/',
             team: 'Berckson Thierry, Livia Mota, João Henrique, Ana Heloisa',
             technologies: 'React, Typescript',
             status: 'funcionando',
