@@ -195,6 +195,8 @@ teamParticleCanvases.forEach((canvas) => {
   panel.addEventListener('mouseleave', () => { isHovered = false; });
   resize();
   createParticles();
+  const panelResizeObserver = new ResizeObserver(resize);
+  panelResizeObserver.observe(panel);
   window.addEventListener('resize', resize);
   animate();
 });
@@ -228,6 +230,57 @@ if (explanationPills.length && explanationCopy) {
     });
   });
 }
+
+const teamCarousels = document.querySelectorAll('.team-carousel');
+const reducedMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+teamCarousels.forEach((carousel) => {
+  const track = carousel.querySelector('.team-members');
+
+  if (!track || track.children.length < 2) return;
+
+  const originalMembers = Array.from(track.children);
+  const membersPerRow = Math.ceil(originalMembers.length / 2);
+  const rows = [
+    originalMembers.slice(0, membersPerRow),
+    originalMembers.slice(membersPerRow),
+  ];
+
+  rows.forEach((members, index) => {
+    const row = document.createElement('div');
+    row.className = 'team-members-row';
+
+    const rowTrack = document.createElement('div');
+    rowTrack.className = 'team-members-row-track';
+
+    const originalGroup = document.createElement('div');
+    originalGroup.className = 'team-members-group';
+    originalGroup.setAttribute('role', 'list');
+    originalGroup.setAttribute('aria-label', `Integrantes da equipe, linha ${index + 1}`);
+
+    members.forEach((member) => {
+      member.setAttribute('role', 'listitem');
+      originalGroup.appendChild(member);
+    });
+
+    const duplicateGroup = originalGroup.cloneNode(true);
+    duplicateGroup.setAttribute('aria-hidden', 'true');
+    duplicateGroup.removeAttribute('role');
+    duplicateGroup.removeAttribute('aria-label');
+    duplicateGroup.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));
+
+    rowTrack.append(originalGroup, duplicateGroup);
+    row.appendChild(rowTrack);
+    track.appendChild(row);
+  });
+
+  track.classList.add('is-animated');
+  carousel.tabIndex = reducedMotionPreference.matches ? 0 : -1;
+
+  reducedMotionPreference.addEventListener('change', (event) => {
+    carousel.tabIndex = event.matches ? 0 : -1;
+  });
+});
 
 const revealItems = document.querySelectorAll('.featured-item');
 

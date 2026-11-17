@@ -432,16 +432,65 @@ body {
     letter-spacing: -0.06em;
 }
 
+.team-carousel {
+    margin-top: 1.8rem;
+    overflow: hidden;
+}
+
+.team-carousel:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
 .team-members {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.1rem;
-    margin-top: 1.8rem;
+}
+
+.team-members.is-animated {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+    width: 100%;
+}
+
+.team-members-row {
+    overflow: hidden;
+}
+
+.team-members-row-track {
+    display: flex;
+    width: max-content;
+    animation: team-carousel-right 45s linear infinite;
+}
+
+.team-carousel:hover .team-members-row-track {
+    animation-play-state: paused;
+}
+
+.team-members-group {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 1.1rem;
+    width: max-content;
+    padding-right: 1.1rem;
+}
+
+@keyframes team-carousel-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .member {
     position: relative;
     z-index: 1;
+    flex: 0 0 11rem;
     background: rgba(255,255,255,0.75);
     border: 1px solid rgba(117, 136, 203, 0.12);
     border-radius: 1.4rem;
@@ -603,12 +652,35 @@ body {
         padding: 1.25rem;
     }
 
-    .team-members {
-        grid-template-columns: 1fr;
+    .member {
+        flex-basis: min(76vw, 17rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-carousel {
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x mandatory;
+    }
+
+    .team-members.is-animated {
+        width: max-content;
+    }
+
+    .team-members-row {
+        overflow: visible;
+    }
+
+    .team-members-row-track {
+        animation: none;
+    }
+
+    .team-members-group[aria-hidden="true"] {
+        display: none;
     }
 
     .member {
-        width: 88%;
-        justify-self: center;
+        scroll-snap-align: start;
     }
 }
